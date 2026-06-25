@@ -1,0 +1,167 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050816;
+color:white;
+padding-top:80px;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(5,8,22,0.8);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #1f2937;
+z-index:1000;
+}
+
+nav h2 span{
+color:#00eaff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:12px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00eaff;
+transform:scale(1.1);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#020617,#123b68);
+}
+
+.hero h1{
+font-size:55px;
+text-shadow:0 0 20px #00eaff;
+}
+
+.hero p{
+font-size:18px;
+margin:20px 0;
+color:#cbd5e1;
+}
+
+/* BUTTON */
+button{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#00eaff;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 15px #00eaff;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#00bcd4;
+}
+
+/* SECTIONS */
+section{
+padding:80px 8%;
+text-align:center;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00eaff;
+}
+
+.card i{
+font-size:40px;
+color:#00eaff;
+margin-bottom:10px;
+}
+
+/* ABOUT */
+.about-text{
+color:#cbd5e1;
+margin-top:20px;
+}
+
+/* CONTACT */
+.contact-info p{
+margin:10px 0;
+color:#cbd5e1;
+}
+
+.contact-info i{
+color:#00eaff;
+margin-right:8px;
+}
+
+.map iframe{
+width:40%;
+height:175px;   /* 🔥 chinna size */
+border:0;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+box-shadow:0 0 15px #25d366;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}

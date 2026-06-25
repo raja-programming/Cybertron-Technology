@@ -1,0 +1,4 @@
+com\cybertron\controller\ContactController.class
+com\cybertron\model\Contact.class
+com\cybertron\CybertronBackendApplication.class
+com\cybertron\repository\ContactRepository.class
