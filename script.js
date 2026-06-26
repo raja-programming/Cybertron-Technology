@@ -1,27 +1,27 @@
-const form =
-document.getElementById("contactForm");
+// CONTACT FORM
 
 
-form.addEventListener("submit",(e)=>{
+const form = document.getElementById("contactForm");
+
+
+
+form.addEventListener("submit", function(e){
 
 
 e.preventDefault();
 
 
 
-let data={
+let contactData = {
 
 
-name:
-document.getElementById("name").value,
+name: document.getElementById("name").value,
 
 
-email:
-document.getElementById("email").value,
+email: document.getElementById("email").value,
 
 
-message:
-document.getElementById("message").value
+message: document.getElementById("message").value
 
 
 };
@@ -29,7 +29,9 @@ document.getElementById("message").value
 
 
 
-fetch("http://localhost:8080/api/contact",{
+
+fetch("http://localhost:8080/api/contact",
+{
 
 
 method:"POST",
@@ -44,34 +46,63 @@ headers:{
 },
 
 
-body:JSON.stringify(data)
+body:JSON.stringify(contactData)
 
 
 })
 
 
-.then(res=>res.json())
+
+.then(response=>{
 
 
-.then(()=>{
+if(response.ok){
 
 
-alert("Message Sent Successfully");
+return response.json();
+
+
+}
+
+
+else{
+
+
+throw new Error("Failed");
+
+
+}
+
+
+})
+
+
+
+.then(data=>{
+
+
+alert("✅ Message Sent Successfully!");
 
 
 form.reset();
 
 
+
 })
 
 
-.catch(()=>{
+
+.catch(error=>{
 
 
-alert("Backend not connected");
+console.log(error);
+
+
+alert("❌ Backend Server Not Connected");
 
 
 });
+
 
 
 });
